@@ -12,6 +12,7 @@ describe('arithmetic module', () => {
   
   it('can add an array of numbers', () => {
     expect(arithmetic.add([1,3,7,10,15])).toEqual(36);
+    console.log(number);
   });
 
   it('can subtract an array of numbers ', () => {
@@ -28,6 +29,9 @@ describe('arithmetic module', () => {
 
   it('only accepts numbers as params', () => {
     expect(arithmetic.add([word])).toEqual(null);
+  });
+  it('only accepts numbers as params', () => {
+    expect(arithmetic.add([number, number])).toBeGreaterThan(1);
   });
 });
 
